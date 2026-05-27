@@ -1,3 +1,6 @@
-body {
+.game-form {
     color: var(--text-color-light);
+}
+.game-form h1 {
+    font-size: 48px;
 }
