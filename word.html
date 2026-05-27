@@ -3,11 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="img/favico.ico" type="image/x-icon">
     <title>Jogo da Forca - Escolha uma Palavra</title>
 </head>
 <body>
-    
+    <main>
+        <section class="game-form">
+            <h1>Bem-vindo ao Jogo da Forca!</h1>
+            <div class="word-input">
+                <p>Escolha uma palavra para começar o jogo:</p>
+                <input type="password" id="palavraInput" required>
+
+                <p>Dê uma dica:</p>
+                <input type="text" id="dicaInput" required>
+            </div>
+            <button id="startGameButton">Iniciar Jogo</button>
+        </section>
+    </main>
 </body>
 </html>
