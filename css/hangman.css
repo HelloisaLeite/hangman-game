@@ -15,14 +15,13 @@
 }
 
 .hangman-box h1 {
-    font-size: 48px;
     text-align: center;
     padding-top: 50px;
 }
 
 .hangman-box .game-content .image-container img {
     margin-left: 40px;
-    width: 300px;
+    width: 330px;
     height: auto;
 }
 
