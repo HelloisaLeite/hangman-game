@@ -1,9 +1,17 @@
+.hangman-container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .hangman-box {
     background-color: var(--secondary-background-color);
     width: 1070px;
+    max-width: 90vw;
     height: 750px;
+    max-height: 90vh;
     border-radius: 15px;
-    margin-top: 50px;
+    padding: 20px;
 }
 
 .hangman-box h1 {
@@ -14,7 +22,7 @@
 
 .hangman-box .game-content .image-container img {
     margin-left: 40px;
-    width: 350px;
+    width: 300px;
     height: auto;
 }
 
