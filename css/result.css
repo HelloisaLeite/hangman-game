@@ -13,27 +13,22 @@ body {
     padding: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #947cb0; /* Cor aproximada do seu fundo */
+    background-color: #947cb0; 
     
-    /* Ativa o Flexbox */
     display: flex;
     
-    /* Organiza o título e o botão em coluna (um embaixo do outro) */
     flex-direction: column;
     
-    /* Centraliza na vertical */
     justify-content: center;
     
-    /* Centraliza na horizontal */
     align-items: center;
     
-    /* Cria um espaço opcional de 20px entre o título e o botão */
     gap: 20px; 
 }
 
 button {
-    width: 100%;                          /* O Grid agora controla a largura */
-    height: 25px;                         /* Altura fixa para ficarem uniformes */
+    width: 100%;                        
+    height: 25px;                         
 
     border: none;
 

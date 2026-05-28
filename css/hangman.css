@@ -1,6 +1,3 @@
-/* ==========================================
-   VARIÁVEIS DE CORES E RESET (TELA DO JOGO)
-   ========================================== */
 :root {
   --game-bg-purple: #856e9b;    
   --board-white: #eaeaea;       
@@ -40,7 +37,6 @@ body.game-page {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-/* Título superior */
 .game-page .hangman-box h1 {
   text-align: center;
   color: var(--text-dark-gray);
@@ -49,7 +45,6 @@ body.game-page {
   margin-bottom: 20px;
 }
 
-/* Layout dividido */
 .game-page .game-content {
   display: flex;
   flex-direction: row;
@@ -61,7 +56,6 @@ body.game-page {
   margin-bottom: 100px; 
 }
 
-/* Lado da Forca */
 .game-page .image-container {
   flex: 1;
   display: flex;
@@ -71,14 +65,12 @@ body.game-page {
 
 .game-page .image-container img {
   max-width: 100%;
-  height: 280px; 
+  height: 350px; 
   object-fit: contain;
   
-  /* CORREÇÃO AQUI: Remove o fundo branco quadrado da imagem da forca */
   mix-blend-mode: multiply; 
 }
 
-/* Lado das Informações */
 .game-page .game-info {
   flex: 1;
   display: flex;
@@ -88,7 +80,6 @@ body.game-page {
   gap: 40px; 
 }
 
-/* Caixa de Dica */
 .game-page .hint-box {
   background-color: var(--hint-bg-gray);
   width: 100%;
@@ -103,7 +94,6 @@ body.game-page {
   color: #222222;
 }
 
-/* CORREÇÃO AQUI: Estilização do container e dos traços gerados pelo JS */
 .game-page .word-display {
   display: flex;
   justify-content: center;
@@ -113,11 +103,10 @@ body.game-page {
   width: 100%;
 }
 
-/* Estilo para cada letra/traço individual (fique de olho se o seu JS cria com essa classe) */
 .game-page .letter-box {
   width: 35px;
   height: 50px;
-  border-bottom: 3px solid #000000; /* Força o traço preto aparecer */
+  border-bottom: 3px solid #000000; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -126,9 +115,6 @@ body.game-page {
   color: var(--text-dark-gray);
 }
 
-/* ==========================================
-   TECLADO INFERIOR
-   ========================================== */
 .game-page #keyboard-container {
   position: absolute;
   bottom: 40px; 

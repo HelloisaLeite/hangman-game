@@ -1,10 +1,7 @@
-/* ==========================================
-   VARIÁVEIS DE CORES DO JOGO
-   ========================================== */
 :root {
-  --bg-purple: #7d6693;        /* O roxo exato do fundo */
-  --btn-dark: #79777e;         /* O roxo escuro idêntico ao botão */
-  --text-light: #ffffff;       /* Branco para as fontes */
+  --bg-purple: #7d6693;      
+  --btn-dark: #79777e;       
+  --text-light: #ffffff;     
 }
 
 * {
@@ -19,11 +16,6 @@ body {
   min-height: 100vh;
 }
 
-/* ==========================================
-   ESTILOS EXCLUSIVOS DA TELA INICIAL (word.html)
-   ========================================== */
-
-/* Garante o fundo roxo e centralização absoluta no meio da tela */
 body.welcome-page {
   display: flex;
   justify-content: center;
@@ -31,14 +23,12 @@ body.welcome-page {
   padding: 20px;
 }
 
-/* Container que define a largura exata do miolo do formulário */
 .welcome-page .game-form {
   width: 100%;
   max-width: 480px;
   text-align: center;
 }
 
-/* Título grande e espaçado */
 .welcome-page h1 {
   color: var(--text-light);
   font-size: 2.5rem;
@@ -47,18 +37,15 @@ body.welcome-page {
   letter-spacing: 0.5px;
 }
 
-/* Bloco dos inputs */
 .welcome-page .word-input {
   margin-bottom: 30px;
 }
 
-/* Alinha o texto explicativo à esquerda acima de cada input */
 .welcome-page .input-group {
   margin-bottom: 22px;
   text-align: left;
 }
 
-/* Estilo do texto "Escolha uma palavra..." e "Dê uma dica..." */
 .welcome-page .input-group p {
   color: var(--text-light);
   font-size: 0.95rem;
@@ -66,12 +53,11 @@ body.welcome-page {
   font-weight: normal;
 }
 
-/* Caixas de texto brancas arredondadas */
 .welcome-page .input-group input {
   width: 100%;
   height: 44px;
   border: none;
-  border-radius: 8px; /* Cantos arredondados na medida certa */
+  border-radius: 8px; 
   background-color: #ffffff;
   padding: 0 14px;
   font-family: 'Itim', cursive, sans-serif;
@@ -80,7 +66,6 @@ body.welcome-page {
   outline: none;
 }
 
-/* Botão retangular escuro "Começar jogo" */
 .welcome-page #startGameButton {
   background-color: var(--btn-dark);
   color: var(--text-light);
@@ -93,11 +78,10 @@ body.welcome-page {
   transition: background-color 0.2s, transform 0.1s;
 
   display: inline-flex;
-  align-items: center;     /* Centraliza na vertical (cima/baixo) */
+  align-items: center;     
   justify-content: center;
 }
 
-/* Feedback visual básico de hover/clique */
 .welcome-page #startGameButton:hover {
   background-color: #5f5e63;
 }
