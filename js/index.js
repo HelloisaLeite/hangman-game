@@ -4,7 +4,7 @@ const palavra = localStorage.getItem("palavra");
 const dica = localStorage.getItem("dica");
 
 let erros = 0;
-let letrasAcertadas = [];
+let acertos = 0;
 
 const hint = document.getElementById("subir");
 hint.textContent = "Dica: " + dica;
@@ -39,21 +39,27 @@ for (let i = 0; i < palavra.length; i++) {
     letra.textContent = palavra[i];
     espaco.appendChild(letra);
     document.getElementById("wordContainer").appendChild(espaco);
-    letrasAcertadas.push(false);
 }
 
 function fazerTentativa(letra) {
 let acertou = false;
 const letras = document.querySelectorAll(".letra");
     letras.forEach((letraElemento, index) => {
-        if (letraElemento.textContent === letra) {
+        if (normalizarLetra(letraElemento.textContent) === normalizarLetra(letra)) {
             letraElemento.style.visibility = "visible";
-            letrasAcertadas[index] = true;
             acertou = true;
+            contabilizarAcerto();
         }
     }); 
     return acertou;
 }
+
+const normalizarLetra = (letra) => {
+  return letra
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toUpperCase();
+};
 
 /* Função para contabilizar os erros e verificar se o jogo acabou */
 function contabilizarErro() {
@@ -63,5 +69,11 @@ function contabilizarErro() {
     if (erros >= 6) {
         window.location.href = "result.html";
     };
-    
 };
+
+function contabilizarAcerto() {
+    acertos++;
+    if (acertos === palavra.length) {
+        window.location.href = "result.html";
+    }
+}
