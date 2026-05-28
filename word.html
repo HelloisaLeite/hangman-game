@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,18 +13,24 @@
     <link rel="icon" href="img/favico.ico" type="image/x-icon" />
     <title>Jogo da Forca - Escolha uma Palavra</title>
   </head>
-  <body>
+  <body class="welcome-page">
     <main>
       <section class="game-form">
         <h1>Bem-vindo ao Jogo da Forca!</h1>
+        
         <div class="word-input">
-          <p>Escolha uma palavra para começar o jogo:</p>
-          <input type="password" id="palavraInput" required />
+          <div class="input-group">
+            <p>Escolha uma palavra para o Jogador 2</p>
+            <input type="password" id="palavraInput" required />
+          </div>
 
-          <p>Dê uma dica:</p>
-          <input type="text" id="dicaInput" required />
+          <div class="input-group">
+            <p>Dê uma dica ao Jogador 2</p>
+            <input type="text" id="dicaInput" required />
+          </div>
         </div>
-        <button id="startGameButton">Iniciar Jogo</button>
+
+        <button id="startGameButton">Começar jogo</button>
       </section>
     </main>
   </body>

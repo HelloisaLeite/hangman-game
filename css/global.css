@@ -10,6 +10,9 @@
     --keyboard-button-color: #D9D9D9;
     --keyboard-button-hover-color: #B3B3B3;
     --keyboard-button-text-color: #000000;
+    --primary-color: #8e8b8b;
+    --primary-color-dark: #4c4c4c;
+    --text-color-light: #ffffff;
 }
 
 *{

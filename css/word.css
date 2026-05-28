@@ -1,3 +1,107 @@
-.game-form {
-    color: var(--text-color-light);
+/* ==========================================
+   VARIÁVEIS DE CORES DO JOGO
+   ========================================== */
+:root {
+  --bg-purple: #7d6693;        /* O roxo exato do fundo */
+  --btn-dark: #79777e;         /* O roxo escuro idêntico ao botão */
+  --text-light: #ffffff;       /* Branco para as fontes */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Itim', cursive, sans-serif;
+  background-color: var(--bg-purple);
+  min-height: 100vh;
+}
+
+/* ==========================================
+   ESTILOS EXCLUSIVOS DA TELA INICIAL (word.html)
+   ========================================== */
+
+/* Garante o fundo roxo e centralização absoluta no meio da tela */
+body.welcome-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container que define a largura exata do miolo do formulário */
+.welcome-page .game-form {
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+}
+
+/* Título grande e espaçado */
+.welcome-page h1 {
+  color: var(--text-light);
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+}
+
+/* Bloco dos inputs */
+.welcome-page .word-input {
+  margin-bottom: 30px;
+}
+
+/* Alinha o texto explicativo à esquerda acima de cada input */
+.welcome-page .input-group {
+  margin-bottom: 22px;
+  text-align: left;
+}
+
+/* Estilo do texto "Escolha uma palavra..." e "Dê uma dica..." */
+.welcome-page .input-group p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  font-weight: normal;
+}
+
+/* Caixas de texto brancas arredondadas */
+.welcome-page .input-group input {
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-radius: 8px; /* Cantos arredondados na medida certa */
+  background-color: #ffffff;
+  padding: 0 14px;
+  font-family: 'Itim', cursive, sans-serif;
+  font-size: 1.1rem;
+  color: #333333;
+  outline: none;
+}
+
+/* Botão retangular escuro "Começar jogo" */
+.welcome-page #startGameButton {
+  background-color: var(--btn-dark);
+  color: var(--text-light);
+  border: none;
+  border-radius: 4px;
+  padding: 20px 50px;
+  font-family: 'Itim', cursive, sans-serif;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+
+  display: inline-flex;
+  align-items: center;     /* Centraliza na vertical (cima/baixo) */
+  justify-content: center;
+}
+
+/* Feedback visual básico de hover/clique */
+.welcome-page #startGameButton:hover {
+  background-color: #5f5e63;
+}
+
+.welcome-page #startGameButton:active {
+  transform: scale(0.98);
 }

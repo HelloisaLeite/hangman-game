@@ -1,42 +1,167 @@
-.hangman-container{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.hangman-box {
-    background-color: var(--secondary-background-color);
-    width: 1070px;
-    max-width: 90vw;
-    height: 750px;
-    max-height: 90vh;
-    border-radius: 15px;
-    padding: 20px;
+/* ==========================================
+   VARIÁVEIS DE CORES E RESET (TELA DO JOGO)
+   ========================================== */
+:root {
+  --game-bg-purple: #856e9b;    
+  --board-white: #eaeaea;       
+  --hint-bg-gray: #c1bcbc;      
+  --key-bg-gray: #ccc7c7;       
+  --text-dark-gray: #333333;    
 }
 
-.hangman-box h1 {
-    text-align: center;
-    padding-top: 50px;
+body.game-page {
+  background-color: var(--game-bg-purple);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Itim', cursive, sans-serif;
 }
 
-.hangman-box .game-content .image-container img {
-    margin-left: 40px;
-    width: 330px;
-    height: auto;
+.game-page .hangman-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Estilos para o traço das letras */
-#wordContainer{
-    display: flex;
-    gap: 2px;
+/* Caixa principal do tabuleiro */
+.game-page .hangman-box {
+  background-color: var(--board-white);
+  width: 100%;
+  max-width: 960px;      
+  height: 680px;         
+  border-radius: 14px;   
+  padding: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
-.letter-box{
-    width: 40px;
-    height: 50px;
-    border-bottom: 3px solid var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
+/* Título superior */
+.game-page .hangman-box h1 {
+  text-align: center;
+  color: var(--text-dark-gray);
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+/* Layout dividido */
+.game-page .game-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0 40px;
+  margin-bottom: 100px; 
+}
+
+/* Lado da Forca */
+.game-page .image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-page .image-container img {
+  max-width: 100%;
+  height: 280px; 
+  object-fit: contain;
+  
+  /* CORREÇÃO AQUI: Remove o fundo branco quadrado da imagem da forca */
+  mix-blend-mode: multiply; 
+}
+
+/* Lado das Informações */
+.game-page .game-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; 
+}
+
+/* Caixa de Dica */
+.game-page .hint-box {
+  background-color: var(--hint-bg-gray);
+  width: 100%;
+  max-width: 320px;
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.game-page #subir {
+  font-size: 1.15rem;
+  color: #222222;
+}
+
+/* CORREÇÃO AQUI: Estilização do container e dos traços gerados pelo JS */
+.game-page .word-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; 
+  min-height: 50px;
+  width: 100%;
+}
+
+/* Estilo para cada letra/traço individual (fique de olho se o seu JS cria com essa classe) */
+.game-page .letter-box {
+  width: 35px;
+  height: 50px;
+  border-bottom: 3px solid #000000; /* Força o traço preto aparecer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--text-dark-gray);
+}
+
+/* ==========================================
+   TECLADO INFERIOR
+   ========================================== */
+.game-page #keyboard-container {
+  position: absolute;
+  bottom: 40px; 
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.game-page #keyboard {
+  display: grid;
+  grid-template-columns: repeat(9, auto); 
+  gap: 8px; 
+  justify-content: center;
+}
+
+.game-page #keyboard .key {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background-color: var(--key-bg-gray);
+  color: var(--text-dark-gray);
+  font-family: 'Itim', cursive, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 6px; 
+  transition: background-color 0.15s;
+}
+
+.game-page #keyboard .key:hover {
+  background-color: #b0aaaa;
 }

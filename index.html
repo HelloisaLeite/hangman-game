@@ -5,67 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/favico.ico" type="image/x-icon" />
     <title>Jogo da Forca - Comece a Jogar</title>
   </head>
-  <body>
-    <main>
-      <section class="hangman-container">
-        <div class="hangman-box">
-          <h1>Jogo da Forca</h1>
-          <div class="game-content">
-            <div class="image-container">
-              <img
-                id="hangmanImage"
-                src="img/forca0.png"
-                alt="Imagem do Jogo da Forca"
-              />
+  <body class="game-page">
+    <main class="hangman-container">
+      <div class="hangman-box">
+        
+        <h1>Jogo da Forca</h1>
+
+        <div class="game-content">
+          <div class="image-container">
+            <img id="hangmanImage" src="img/forca0.png" alt="Imagem do Jogo da Forca" />
+          </div>
+
+          <div class="game-info">
+            <div class="hint-box">
+              <p id="subir">Dica: Fruta</p>
             </div>
-
-            <div class="game-info">
-              <p id="hint">Dica:</p>
-
-              <div id="wordContainer"></div>
-
-              <div id="keyboard">
-                <button class="key">A</button>
-                <button class="key">B</button>
-                <button class="key">C</button>
-                <button class="key">D</button>
-                <button class="key">E</button>
-                <button class="key">F</button>
-                <button class="key">G</button>
-                <button class="key">H</button>
-                <button class="key">I</button>
-
-                <button class="key">J</button>
-                <button class="key">K</button>
-                <button class="key">L</button>
-                <button class="key">M</button>
-                <button class="key">N</button>
-                <button class="key">O</button>
-                <button class="key">P</button>
-                <button class="key">Q</button>
-                <button class="key">R</button>
-
-                <button class="key">S</button>
-                <button class="key">T</button>
-                <button class="key">U</button>
-                <button class="key">V</button>
-                <button class="key">W</button>
-                <button class="key">X</button>
-                <button class="key">Y</button>
-                <button class="key">Z</button>
-              </div>
-            </div>
+            
+            <div id="wordContainer" class="word-display"></div>
           </div>
         </div>
-      </section>
+
+        <div id="keyboard-container">
+          <div id="keyboard">
+            <button class="key">A</button><button class="key">B</button><button class="key">C</button><button class="key">D</button><button class="key">E</button><button class="key">F</button><button class="key">G</button><button class="key">H</button><button class="key">I</button>
+            <button class="key">J</button><button class="key">K</button><button class="key">L</button><button class="key">M</button><button class="key">N</button><button class="key">O</button><button class="key">P</button><button class="key">Q</button><button class="key">R</button>
+            <button class="key">S</button><button class="key">T</button><button class="key">U</button><button class="key">V</button><button class="key">W</button><button class="key">X</button><button class="key">Y</button><button class="key">Z</button>
+          </div>
+        </div>
+
+      </div>
     </main>
   </body>
 </html>
