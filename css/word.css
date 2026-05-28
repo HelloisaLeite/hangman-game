@@ -67,7 +67,7 @@ body.welcome-page {
 }
 
 .welcome-page #startGameButton {
-  background-color: var(--btn-dark);
+  background-color: var(--button-color);
   color: var(--text-light);
   border: none;
   border-radius: 4px;
@@ -83,7 +83,7 @@ body.welcome-page {
 }
 
 .welcome-page #startGameButton:hover {
-  background-color: #5f5e63;
+  background-color: var(--button-hover-color);
 }
 
 .welcome-page #startGameButton:active {
