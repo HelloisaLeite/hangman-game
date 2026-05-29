@@ -34,7 +34,7 @@ for (let i = 0; i < alfabeto.length; i++) {
     document.getElementById("keyboard").appendChild(letraButton);
 }
 
-// Laço para gerar os tracinhos das letras da palavra 
+// Laço para gerar os tracinhos das letras da palavra. 
 for (let i = 0; i < palavra.length; i++) {
     const espaco = document.createElement("div");
     espaco.classList.add("espaco-letra");
@@ -44,7 +44,7 @@ for (let i = 0; i < palavra.length; i++) {
     espaco.appendChild(letra);
     document.getElementById("wordContainer").appendChild(espaco);
 }
-// Função para verificar se a letra existe na palavra e mostrar a letra caso exista
+// Função para verificar se a letra existe na palavra e mostrar a letra caso exista.
 function fazerTentativa(letra) {
 let acertou = false;
 const letras = document.querySelectorAll(".letra");
@@ -57,7 +57,7 @@ const letras = document.querySelectorAll(".letra");
     }); 
     return acertou;
 }
-// Função para normalizar as letras, removendo acentos e convertendo para maiúsculas
+// Função para normalizar as letras, removendo acentos e convertendo para maiúsculas.
 const normalizarLetra = (letra) => {
   return letra
     .normalize('NFD')
@@ -65,7 +65,7 @@ const normalizarLetra = (letra) => {
     .toUpperCase();
 };
 
-// Função para contabilizar os erros e verificar se o jogo acabou
+// Função para contabilizar os erros e verificar se o jogo acabou.
 function contabilizarErro() {
     erros++;
     const forca = document.getElementById("hangmanImage");
@@ -76,7 +76,7 @@ function contabilizarErro() {
     };
 };
 
-// Função para contabilizar os acertos e verificar se o jogo acabou
+// Função para contabilizar os acertos e verificar se o jogo acabou.
 function contabilizarAcerto() {
     acertos++;
     if (acertos === palavra.length) {
