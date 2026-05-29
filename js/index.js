@@ -67,6 +67,7 @@ function contabilizarErro() {
     const forca = document.getElementById("hangmanImage");
     forca.src = `img/forca${erros}.png`;
     if (erros >= 6) {
+        localStorage.setItem("resultado", "perdeu");
         window.location.href = "result.html";
     };
 };
@@ -74,6 +75,7 @@ function contabilizarErro() {
 function contabilizarAcerto() {
     acertos++;
     if (acertos === palavra.length) {
+        localStorage.setItem("resultado", "venceu");
         window.location.href = "result.html";
     }
 }
