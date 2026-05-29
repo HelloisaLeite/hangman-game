@@ -1,3 +1,4 @@
+// Recupera o resultado do jogo do localStorage
 const resultado = localStorage.getItem("resultado");
 if (resultado === "venceu") {
     document.getElementById("resultMessage").textContent = "Impressionante! Você conseguiu acertar a palavra antes que a forca fosse completada. Vitória mais do que merecida!";
